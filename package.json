@@ -1,0 +1,26 @@
+{
+  "name": "lmoment",
+  "version": "1.0.1",
+  "description": "mini moment library",
+  "main": "lmoment.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lstrive-yn/lmoment.git"
+  },
+  "keywords": [
+    "moment",
+    "mini-moment",
+    "date"
+  ],
+  "author": "lstrive",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-loader": "^8.0.6",
+    "uglifyjs-webpack-plugin": "^2.2.0"
+  }
+}

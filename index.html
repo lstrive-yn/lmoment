@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lmoment.js"></script>
+</head>
+<body>
+    
+</body>
+<script>
+   
+    console.log(lmoment().format("YYYY-MM-DD HH:mm"));
+    console.log(lmoment().format("YYYY"));
+    console.log(lmoment().format("d"));
+    console.log(lmoment().format("YYYY/MM"));
+    console.log(lmoment().format("YYYY/MM/DD"));
+    console.log(lmoment().format("YYYY/MM/DD HH:mm:ss"));
+    console.log(lmoment("2020/12/01 12:00:12").format("YYYY-MM-DD HH:mm:ss"));
+
+    console.log(lmoment("2021/12/01 12:00:12").relative("year").fromNow());
+    console.log(lmoment().relative("year").from("2018/1/01 12:00:12"));
+    console.log(lmoment("2021/12/01 12:00:12").relative("year").from("2019/12/01 12:00:12"));
+    console.log(lmoment("2018/12/01 12:00:12").relative("year").from("2019/12/01 12:00:12"));
+
+    console.log(lmoment().relative("month").from("2020/12/01 12:00:12"));
+    console.log(lmoment("2020/11/01 12:00:12").relative("month").from("2020/12/01 12:00:12"));
+
+    console.log(lmoment().relative("date").from("2020/2/6 12:00:12"));
+    console.log(lmoment("2020/2/02 12:00:12").relative("date").from("2020/2/6 12:00:12"));
+
+    console.log(lmoment().relative("hour").from("2020/2/8 7:00:12"));
+    console.log(lmoment("2020/2/8 12:00:12").relative("hour").from("2020/2/8 7:00:12"));
+    
+    console.log(lmoment().relative("minute").from("2020/2/8 8:00:12"));
+    console.log(lmoment("2020/2/8 7:00:12").relative("minute").from("2020/2/8 8:00:12"));
+
+    console.log(lmoment().relative("seconds").from("2020/2/8 8:45:12"));
+    console.log(lmoment("2020/2/8 8:44:12").relative("seconds").from("2020/2/8 8:45:12"));
+
+    console.log(lmoment().calendar());
+    console.log(lmoment().before(1).calendar());
+    console.log(lmoment().before(2).calendar());
+    console.log(lmoment().before(3).calendar());
+    console.log(lmoment().after(1).calendar());
+    console.log(lmoment().after(2).calendar());
+    console.log(lmoment().after(3).calendar());
+    console.log(lmoment().after(20).calendar());
+
+    lmoment().countdown("2020-02-08 13:54:53", 1000, function (date) {
+        document.body.innerHTML = `<div>${date.d}天${date.h}小时${date.m}分${date.s}秒</div>`
+    }, function () {
+        alert("倒计时结束")
+    })
+</script>
+</html>
