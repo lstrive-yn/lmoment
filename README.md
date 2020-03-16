@@ -16,21 +16,26 @@
 
 **- 时间格式转换(format time)**
 
-		Y: year; 
-		M: month; 
-		D: day;
-		H: hour;
-		m: minute; 
-		s: second; 
-		d: date
+	Y: year; 
+	M: month; 
+	D: day;
+	H: hour;
+	m: minute; 
+	s: second; 
+	d: date
 	 
 格式化方法：
 
 	lmoment().format("d") // Monday/星期一
+
     lmoment().format("YYYY")  // 201*
+
     lmoment().format("YYYY/MM" // 201*/**
+
     lmoment().format("YYYY-MM-DD HH:mm") // 201*-**-** **:** 
+
     lmoment().format("YYYY-MM-DD HH:mm:ss") // 201*-**-** **:**:ss
+
     lmoment("2020/12/01 12:00:12").format("YYYY-MM-DD HH:mm:ss")
 	
 **- 相对时间处理(relative time)**
@@ -56,11 +61,15 @@
 **日历时间(calendar time)**
 
 	lmoment().calendar() // today HH:mm/ 今天 **：**
+
 	lmoment().before(1).calendar() // yesterday HH:mm/ 昨天 **：**
+
 	lmoment().before(2).calendar() // the day before yesterday HH:mm/ 前天 **：**
 
 	lmoment().after(1).calendar() // tomorrow HH:mm/ 明天 **：**
+
 	lmoment().after(2).calendar() // the day after tomorrow HH:mm/ 后天 **：**
+
 	lmoment().after('beyond two weeks').calendar()； // YYYY/MM/DD HH:ss
 
 ** 倒计时时间(countdown time)**
@@ -70,7 +79,7 @@
 	exp:
 
 	lmoment().countdown("2020-02-08 13:54:53", 1000, function (date) {
-        document.body.innerHTML = `<div>${date.d}days${date.h}hours${date.m}minutes${date.s}seconds</div>`
+		document.body.innerHTML = `<div>${date.d}days${date.h}hours${date.m}minutes${date.s}seconds</div>`
 	}, function () {
 		alert("end of countdown")
 	})
