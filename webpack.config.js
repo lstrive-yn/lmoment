@@ -6,7 +6,10 @@ module.exports = {
     entry: './index.js',
     output: {
         filename: "lmoment.js",
-        path: path.join(__dirname, "./")
+        path: path.join(__dirname, "./"),
+        libraryTarget: "umd",
+        umdNamedDefine: true,
+        globalObject: 'this'
     },
     module: {
         rules: [

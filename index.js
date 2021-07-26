@@ -278,7 +278,9 @@ function lmoment(date) {
     return new Moment(date);
 }
 
-typeof exports === 'object' && typeof module !== 'undefined' ? 
-    module.exports = lmoment :
-        typeof define === 'function' && define.amd ? define(lmoment) :
-            global.lmoment = lmoment;
+// typeof exports === 'object' && typeof module !== 'undefined' ? 
+//     module.exports = lmoment :
+//         typeof define === 'function' && define.amd ? define(lmoment) :
+//             global.lmoment = lmoment;
+
+export default lmoment;
